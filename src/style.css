@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(170, 211, 236), white);
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  background: white;
+  width: clamp(40%, 500px, 90%);
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  margin: 7rem 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.301);
+}
+
+.alert {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+}
+
+.alert.danger {
+  background: rgba(252, 4, 4, 0.315);
+  color: red;
+}
+
+.alert.success {
+  background: rgba(0, 128, 0, 0.356);
+  color: green;
+}
+
+.title {
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+}
+
+input[type="text"] {
+  width: 60%;
+  outline: none;
+  border: 2px solid #666;
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9em;
+}
+
+input[type="text"]:focus {
+  border: 2px solid rgb(25, 152, 236);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+}
+
+input[type="submit"] {
+  padding: 0.2rem 0.5rem;
+  background-color: lightskyblue;
+  border: 2px solid #666;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.301);
+}
+
+.grocery-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grocery {
+  display: none;
+}
+
+.grocery.active {
+  display: block;
+}
+
+.grocery-list article {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  border-bottom: 1px solid #666;
+}
+
+.grocery-list article:hover {
+  background-color: rgb(234, 250, 250);
+}
+
+.grocery-list article.edit {
+  background: rgba(243, 146, 146, 0.425);
+}
+
+.grocery-list article h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.grocery-list article button {
+  border: none;
+  font-size: 1em;
+  margin-left: 0.5rem;
+  background: none;
+  cursor: pointer;
+}
+
+button#edit {
+  color: green;
+}
+
+button#delete {
+  color: red;
+}
+
+p#clear {
+  color: red;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-top: 1rem;
+  cursor: pointer;
+}
